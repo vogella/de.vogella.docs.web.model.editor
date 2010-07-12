@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="de.vogella.docs.web.model.vogella.presentation.vogellaModelWizardID"
+            name="%_UI_vogellaModelWizard_label"
+            class="de.vogella.docs.web.model.vogella.presentation.vogellaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/vogellaModelFile.gif">
+         <description>%_UI_vogellaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="de.vogella.docs.web.model.vogella.presentation.vogellaEditorID"
+            name="%_UI_vogellaEditor_label"
+            icon="icons/full/obj16/vogellaModelFile.gif"
+            extensions="vogella"
+            class="de.vogella.docs.web.model.vogella.presentation.vogellaEditor"
+            contributorClass="de.vogella.docs.web.model.vogella.presentation.vogellaActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
